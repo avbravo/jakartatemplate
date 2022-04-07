@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
-   version="5.0">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
     <session-config>
         <session-timeout>
-           2
+            2
         </session-timeout>
-          <tracking-mode>COOKIE</tracking-mode>
+        <tracking-mode>COOKIE</tracking-mode>
     </session-config>
     
-   <!--
+    <!--
 JSF Configuration
-       -->
+    -->
     <context-param>
         <param-name>javax.faces.FACELETS_REFRESH_PERIOD</param-name>
         <param-value>0</param-value>
@@ -39,6 +39,14 @@ JSF Configuration
     </context-param> 
     
     
-    
+    <!--
+YO
+    -->
+
+
+    <context-param>        
+        <param-name>javax.faces.FACELETS_SKIP_COMMENTS</param-name>        
+        <param-value>true</param-value>
+    </context-param>
     
 </web-app>

@@ -8,11 +8,32 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        <f:view contentType="text/html"> 
+        <f:view contentType="text/html" encoding="UTF-8"> 
+             <style>
+                /* reset on the showcase style*/
+                body .ui-panelgrid .ui-panelgrid-cell {
+                    background-color: transparent;
+                }
+
+                /* example use of styles for your form */
+                .my-heading-row {
+                    background-color: var(--surface-c);
+                    font-weight: bold;
+                }
+            </style>
             <h:form>
                 <h3>page 2</h3>
-                <p:outputLabel value="#{app['application.login']}" />
+                  <p:panelGrid columns="1"
+                             columnClasses="ui-grid-col-2,ui-grid-col-4,ui-grid-col-2,ui-grid-col-4"
+                             layout="grid"
+                             styleClass="ui-panelgrid-blank ui-fluid"
+                      style="border:0px none; background-color:transparent;">
+                                 
+                         <p:outputLabel value="#{app['application.login']}" />
+                <p:outputLabel value="#{loginController.username}"/>
                 <p:commandButton value="index" action="index"/>
+                  </p:panelGrid>
+             
                 
             </h:form>
         </f:view>
